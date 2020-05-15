@@ -4,7 +4,7 @@ import {LoginPage, PeoplePage, PlanetsPage, SecretPage, StarshipsPage} from "../
 import StarshipDetails from "../sw-components/starship-details";
 
 
-const ProtectedApp = ({isLoggedIn}) => {
+const ProtectedApp = ({isLoggedIn, onLogin}) => {
     return (
         <Switch>
 
@@ -21,7 +21,7 @@ const ProtectedApp = ({isLoggedIn}) => {
                 render={() => (
                     <LoginPage
                         isLoggedIn={isLoggedIn}
-                        onLogin={this.onLogin}/>
+                        onLogin={onLogin}/>
                 )}/>
 
             <Route
